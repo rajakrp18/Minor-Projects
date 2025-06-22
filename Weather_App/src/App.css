@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.dark {
+    background: #222;
+    color: #eee;
+}
+
+.container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.city-input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+.dark-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.suggestions {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 200px;
+    background: #fff;
+    position: absolute;
+}
+
+.suggestions li {
+    padding: 6px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background: #eee;
+}
+
+.card {
+    background: var(--card-bg, #fff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+    width: 700px;
+}
+
+body.dark .card {
+    --card-bg: #333;
+    color: #ddd;
+}
+
+.desc {
+    text-transform: capitalize;
+}
+
+.details {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2,
+h3 {
+    color: #e67e17de;
+}
