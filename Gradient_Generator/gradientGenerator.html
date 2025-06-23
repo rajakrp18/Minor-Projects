@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>Copy Your Code Here</h2>
+        <div class="copyCode">
+            background-image:linear-gradient(to right,rgb(92,145,229),rgb(152,63,198))
+        </div>
+        <button class="myButton1" id="myButton1">passbuttoncolor1</button>
+        <button class="myButton2" id="myButton2">passbuttoncolor2</button>
+    </section>
+
+    <script>
+        let btn1 = document.getElementById('myButton1');
+        let btn2 = document.getElementById('myButton2');
+        let copyDiv = document.querySelector('.copyCode');
+        let rgb1 = "#333";
+        let rgb2 = "#444";
+
+        // get hex code
+        const getHexValues = () => {
+            let myHexaValues = "0123456789abcdef";
+            let color = "#"
+            for (let i = 0; i < 6; i++) {
+                color = color + (myHexaValues[Math.floor(Math.random() * 16)]);
+            }
+            return color;
+        };
+
+        // hex code generator for button1
+        const handleButton1 = () => {
+            let rgb1 = getHexValues();
+            console.log(rgb1);
+
+            // set the background color of the body
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+
+            copyDiv.innerHTML = `background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+
+        };
+
+        // hex code generator for button2
+        const handleButton2 = () => {
+            let rgb2 = getHexValues();
+            console.log(rgb2);
+
+            // set the background color of the body
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+
+            copyDiv.innerHTML = `background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+        };
+
+
+
+        // Add event listeners to buttons
+        btn1.addEventListener("click", handleButton1);
+        btn2.addEventListener("click", handleButton2);
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- first patch -->
