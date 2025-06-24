@@ -32,9 +32,6 @@ gradient-generator/
 ├── Gradient-Generator2.png # Screenshot preview
 └── README.md # You’re here!
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -48,9 +45,7 @@ cd gradient-generator
 2. Run It
 Simply open the gradientGenerator.html file in your browser:
 
-bash
-Copy
-Edit
+
 start gradientGenerator.html
 or drag and drop it into your browser window.
 
@@ -66,9 +61,6 @@ Subtle animations improve the user experience using CSS transitions and box-shad
 📋 Copy to Clipboard Feature
 Clicking the displayed CSS line:
 
-css
-Copy
-Edit
 background-image: linear-gradient(to right, #45c90a, #1d584f)
 automatically copies it to your clipboard using the navigator.clipboard API.
 
