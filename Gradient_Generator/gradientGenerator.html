@@ -5,27 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Generator</title>
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="gradientGenerator.css">
 </head>
 
 <body>
-    <section>
-        <h2>Copy Your Code Here</h2>
+    <div class="container">
+        <h1>Gradient Generator for your Website</h1>
+        <h3>Click on the button to change color and click on the below text to Copy</h3>
+
+        <div class="button-wrapper">
+            <button class="myButton1" id="myButton1">#45c90a</button>
+            <button class="myButton2" id="myButton2">#1d584f</button>
+        </div>
+
         <div class="copyCode">
             background-image:linear-gradient(to right,rgb(92,145,229),rgb(152,63,198))
         </div>
-        <button class="myButton1" id="myButton1">passbuttoncolor1</button>
-        <button class="myButton2" id="myButton2">passbuttoncolor2</button>
-    </section>
+
+
+    </div>
 
     <script>
         let btn1 = document.getElementById('myButton1');
         let btn2 = document.getElementById('myButton2');
         let copyDiv = document.querySelector('.copyCode');
-        let rgb1 = "#333";
-        let rgb2 = "#444";
+        // Initial colors
+        let rgb1 = "#45c90a";
+        let rgb2 = "#1d584f";
+
+        // Function to initialize the default gradient on page load
+        const setInitialGradient = () => {
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
+            copyDiv.innerHTML = `background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+            btn1.innerHTML = rgb1;
+            btn2.innerHTML = rgb2;
+        };
+
+        // Call the function right away
+        setInitialGradient();
+
 
         // get hex code
         const getHexValues = () => {
@@ -39,27 +57,43 @@
 
         // hex code generator for button1
         const handleButton1 = () => {
-            let rgb1 = getHexValues();
+            rgb1 = getHexValues();
             console.log(rgb1);
+            btn1.innerHTML = rgb1;
 
             // set the background color of the body
             document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
 
             copyDiv.innerHTML = `background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+
+            // Copy the text to clipboard
+            copyToClipboard(rgb1);
 
         };
 
         // hex code generator for button2
         const handleButton2 = () => {
-            let rgb2 = getHexValues();
+            rgb2 = getHexValues();
             console.log(rgb2);
+            btn2.innerHTML = rgb2;
 
             // set the background color of the body
             document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
 
             copyDiv.innerHTML = `background-image:linear-gradient(to right,${rgb1},${rgb2})`;
+
+            // Copy the text to clipboard
+            copyToClipboard(rgb2);
         };
 
+        // Function to copy text to clipboard
+        const copyToClipboard = (text) => {
+            navigator.clipboard.writeText(text);
+
+            // if you want the alert to be shown after copying
+            // .then(() => alert(`Copied: ${text}`))
+            // .catch(err => alert('Failed to copy'));
+        };
 
 
         // Add event listeners to buttons
@@ -67,9 +101,11 @@
         btn2.addEventListener("click", handleButton2);
 
 
+
+
+
     </script>
 </body>
 
 </html>
-
-<!-- first patch -->
+<!-- final patch (1.0)-->

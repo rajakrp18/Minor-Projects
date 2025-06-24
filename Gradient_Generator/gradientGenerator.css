@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    padding: 10px;
+    /* gap: 10px; */
+    border: 2px solid #ddd;
+
+    height: 450px;
+    width: 950px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    /* subtle transparency */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    /* subtle zoom in */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    /* soft shadow */
+    border-color: #fff;
+    /* Optional: emphasize border on hover */
+}
+
+
+.button-wrapper {
+    display: flex;
+    gap: 10px;
+    /* space between buttons */
+    justify-content: center;
+    /* optional: center the buttons */
+    margin: 20px 0;
+    /* optional spacing above/below */
+}
+
+.myButton1,
+.myButton2 {
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    /* Rounded corners */
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.myButton1:hover,
+.myButton2:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    background-color: #f0f0f0;
+    /* Soft hover background */
+}
