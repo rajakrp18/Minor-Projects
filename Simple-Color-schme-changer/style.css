@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* spacing between elements */
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.button {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin: 5px;
+    /* display: inline-block; */
+    cursor: pointer;
+}
+
+.button-wrapper {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#grey {
+    background-color: grey;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#purple {
+    background-color: purple;
+}
