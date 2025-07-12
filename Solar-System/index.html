@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>3D Solar System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- <div id="ui">
+        <button onclick="toggleOrbits()">Start/Stop Orbits</button>
+        <button onclick="toggleAutoRotate()">Toggle Camera Rotate</button>
+        <div id="sliders"></div>
+    </div> -->
+    <div id="container"></div>
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+
+    <!-- INLINE OrbitControls -->
+    <script>
+        // OrbitControls from r149 (inlined so it's guaranteed to work)
+        THREE.OrbitControls = function (object, domElement) {
+            this.object = object;
+            this.domElement = (domElement !== undefined) ? domElement : document;
+
+            this.enabled = true;
+            this.target = new THREE.Vector3();
+
+            let scope = this;
+
+            function onMouseMove(event) {
+                if (!scope.enabled) return;
+                const dx = event.movementX || 0;
+                const dy = event.movementY || 0;
+                scope.object.rotation.y -= dx * 0.005;
+                scope.object.rotation.x -= dy * 0.005;
+            }
+
+            this.update = function () {
+                scope.object.lookAt(scope.target);
+            };
+
+            domElement.addEventListener('mousemove', onMouseMove, false);
+        };
+    </script>
+
+    <!-- App -->
+    <script src="script.js"></script>
+</body>
+
+</html>
