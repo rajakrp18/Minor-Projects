@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(38 27 17);
+    /* color: white; */
+    font-size: large;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    flex-direction: column;
+    color: white;
+
+
+}
+
+.clock {
+    /* border: 2px solid black; */
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+
+}
